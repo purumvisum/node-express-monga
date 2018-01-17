@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>What your favorite Movie</h2>
+	<form action='/favorite_movie' method='POST'>
+		{% for movie in movies %}
+			<input type='radio' name = 'filmName' id= '{{movie.imdb}}' value= '{{ movie.title }}'/>
+			<label for = '{{movie.imdb}}' > {{movie.title}} </label>
+			<br/>
+		{% endfor %}
+		<input type="submit" name="submit" value="submit">
+	</form>
+</body>
+</html>
